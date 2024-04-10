@@ -37,7 +37,7 @@ app.get('/items', async (req, res) => {
 app.post('/items', async (req, res) => {
   const item = new Item({
     name: req.body.name,
-    description: req.body.description,
+    location: req.body.location,
   });
 
   try {

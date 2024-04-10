@@ -5,7 +5,7 @@ import './register.css';
 
 function Register() {
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [location, setLocation] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,14 +16,14 @@ function Register() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify({ name, location }),
     });
 
     if (response.ok) {
       console.log("User Registered!");
       // Reset form or give user feedback
       setName('');
-      setDescription('');
+      setLocation('');
       alert('User Registered successfully!');
     } else {
       // Handle server errors or invalid responses
@@ -45,8 +45,8 @@ function Register() {
           />
           <input
             type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
             placeholder="Company Name"
             required
           />
