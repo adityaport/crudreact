@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../App.css'; // Ensure this is still here if you have global styles
-import './register.css'; // Import the register styles
+import '../App.css'; 
+import './register.css'; 
 
 
 function Register() {
@@ -10,7 +10,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Assuming your backend endpoint is /items and it's accessible via the proxy setup
+   
     const response = await fetch('/items', {
       method: 'POST',
       headers: {
